@@ -1,14 +1,11 @@
 // Типи даних
 
 const array = [true, "mamamia", 5, ":3", 228, false, -1007, -20, "baka"]; 
-const hash = {
-    number: 0,
-    string: 0,
-    boolean: 0
-};
+const hash = {};
 
 for (const element of array) {
     const type = typeof element;
-    hash[type] = hash[type] + 1;
+    const count = hash[type] || 0;
+    hash[type] = count + 1; 
 }
 console.dir(hash);
