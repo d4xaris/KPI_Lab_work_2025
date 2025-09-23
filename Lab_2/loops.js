@@ -7,6 +7,5 @@ const range = (start, end) => {
   }
   return result;
 }
-
 console.log(range(15, 30));
 
