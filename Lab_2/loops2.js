@@ -7,7 +7,7 @@ const oddRange = (start, end) => {
     result.push(i);
   }
   return result;
-}
+};
 console.log(oddRange(15, 30));
 
 /* let i;
