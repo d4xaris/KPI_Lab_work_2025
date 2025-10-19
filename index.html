@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task Tracker</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+                background-image: url("F_BfnDUa4AALYYy.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <big><b><h1 style="text-align: center">Task manager</h1></b></big>
+            <p id="quote-text">Loading quote...</p>
+        </div>
+
+        <script>
+            const quotes = [
+                "The only way to do great work is to love what you do. — Steve Jobs",
+                "Do what you can, with what you have, where you are. — Theodore Roosevelt",
+                "Don't watch the clock; do what it does. Keep going. — Sam Levenson",
+                "Believe you can and you're halfway there. — Theodore Roosevelt",
+                "Start where you are. Use what you have. Do what you can. — Arthur Ashe",
+                "Success is not in what you have, but who you are. — Bo Bennett",
+                "You are never too old to set another goal or to dream a new dream. — C.S. Lewis",
+                "Keep your eyes on the stars, and your feet on the ground. — Theodore Roosevelt",
+            ];
+
+            function showRandomQuote() {
+                const quote = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById("quote-text").textContent = quote;
+            }
+            showRandomQuote();
+            setInterval(showRandomQuote, 10000);
+        </script>
+
+        <div class="input-area">
+            <div class="input">
+                <label for="name">Add a task:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    minlength="1"
+                    maxlength="40"
+                    size="30"
+                />
+            </div>
+
+            <div class="button">
+                <p>Click or Press enter to add a task</p>
+            </div>
+        </div>
+
+        <div class="tasklist"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
