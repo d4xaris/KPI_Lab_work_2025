@@ -1,10 +1,10 @@
+// Array.prototype.reduce()
+
 function sum(...args) {
-  const total = args.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    0,
-  );
+  const total = args.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   return total;
 }
+
 
 console.log(sum(1, 2, 3));
 console.log(sum());

@@ -1,3 +1,5 @@
+// for of
+
 function sum(...args) {
   let total = 0;
   for (const value of args) {

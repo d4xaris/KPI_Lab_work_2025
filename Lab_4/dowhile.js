@@ -1,3 +1,5 @@
+// do while
+
 function sum(...args) {
   let total = 0;
   let i = 0;
